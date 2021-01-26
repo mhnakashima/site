@@ -1,0 +1,82 @@
+.project{
+    display: grid;
+    padding: 15px 0;
+
+    &:last-child{
+        bottom: none;
+    }
+
+    &.main{
+
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eaeaea;
+
+        .title{
+            display: block;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .subtitle{
+            display: block;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px){
+            .title{
+                grid-area: title;
+            }
+            .title{
+                grid-area: subtitle;
+            }
+
+            .project__image{
+                grid-area: project;
+            }
+
+            .paragraph{
+                grid-area: paragraph;
+            }
+
+            grid-template-areas: 
+            "title"
+            "subtitle"
+            "project"
+            "paragraph";
+            
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.item{
+        grid-template-areas: "image holder";
+        grid-template-columns: minmax(300px, 300px) 1fr;
+
+        border-bottom: 1px solid #eaeaea;
+
+        @media screen and (max-width: 768px){
+            grid-template-areas: 
+            "image"
+            "holder";
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image{
+        @media screen and (max-width: 768px){
+            grid-area: image;
+        }
+    }
+
+    &__holder{
+        grid-area: holder;
+
+        @media screen and (min-width: 768px){
+            margin-left: 20px;
+        }
+    
+        @media screen and (max-width: 768px){
+            margin-left: 0px;
+        }
+    }
+}

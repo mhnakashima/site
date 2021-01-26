@@ -1,0 +1,18 @@
+.button{
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    &:focus { outline: none; }
+
+    &__holder{
+        color: #FFF;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__text{
+        margin-left: 5px;
+    }
+}

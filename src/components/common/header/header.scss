@@ -1,0 +1,11 @@
+.header{
+    >h1{
+        color: #49515C;
+        font-size: 38px;
+        font-weight: bold;
+
+        @media screen and (max-width: 768px){
+            margin: 20px 0 5px 0;
+        }
+    }
+}
