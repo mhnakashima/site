@@ -1,17 +1,24 @@
-body{
-  background-color: #dddddd;
-  font-family: 'Montserrat', sans-serif;
+@import './public/styles/variables.scss';
+
+body {
+  background-color: #efefef;
+  font-family: 'Lato', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-a{
+a {
   color: #69CA8E;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
@@ -41,42 +48,51 @@ img{
   color: #61dafb;
 }
 
-.container{
-  margin: 20px;
-  padding: 30px;
-
-  background-color: #fff;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.content{
+.content {
   display: grid;
-  
-  @media screen and (max-width: 768px){
-    grid-template-areas: 
+
+  @media screen and (max-width: 768px) {
+    grid-template-areas:
       "main"
       "sidebar"
     ;
     grid-template-columns: 1fr;
   }
-  @media screen and (min-width: 768px){
-    grid-template-areas: "main sidebar";
-    grid-template-columns: 8fr 4fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 3fr 9fr;
   }
 }
 
-.main{
+.main {
   grid-area: main;
 }
 
-.sidebar{
+.sidebar {
   grid-area: sidebar;
+  height: 100vh;
+  background-color: $mainBackground;
+
+  .information {
+    padding-top: 140px;
+  }
+}
+
+.information {
+  text-align: center;
+}
+
+a {
+  color: rgba($color: #0a0a0a, $alpha: 0.8);
 }
