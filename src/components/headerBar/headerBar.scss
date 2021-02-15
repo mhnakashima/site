@@ -1,38 +1,58 @@
-.headerBar{
+@import './../../public/styles/variables.scss';
+
+.headerBar {
+    margin: 25px 0 70px;
+
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: normal;
+    text-transform: uppercase;
     
-    display: grid;
-    grid-template-areas: "pic info contactMe";
-    grid-template-columns: 2fr 10fr 2fr;
-    align-items: center;
+    &__status {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-    @media screen and (max-width: 768px){
-        grid-template-areas: 
-        "pic"
-        "info"
-        "contactMe";
-        grid-template-columns: 1fr;
-        justify-items: center;
+        margin-right: 40px;
+        font-size: 0.75rem;
     }
-    
-    padding: 30px;
 
-    background-color: #F5F5F5;
-    border-top: 10px solid #778491;
-    .pic{
-        grid-area: pic;
-    }
-    .info{
-        grid-area: info;
+    .status {
+        display: inline-block;
 
-        @media screen and (min-width: 768px){
-            margin-left: 20px;
+        height: 23px;
+        width: 23px;
+
+        margin-left: 15px;
+        
+        border-radius: 100%;
+
+        &.available {
+            background-color: $statusAvailable;
+        }
+
+        &.warning {
+            background-color: $statusAvailable;
         }
     }
-    .contactMe{
-        grid-area: contactMe;
+}
 
-        @media screen and (max-width: 768px){
-            margin-top: 30px;
-        }
+.languages {
+    margin: 0 15px;
+    padding: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        list-style: none;
+    }
+
+    &__button {
+        padding: 0;
+
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font: inherit;
+        outline: inherit;
     }
 }
